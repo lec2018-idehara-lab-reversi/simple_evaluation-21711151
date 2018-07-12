@@ -21,7 +21,7 @@ final int[][] tensu =
     {0,9,  1,2,2,2,2,  1,9,0},
     {0,0,  0,0,0,0,0,0,0,0} };
 
-int KUROBAN = HITO;
+int KUROBAN = COMP;
 int SHIROBAN = COMP;
 
 int[][] ban;
@@ -270,6 +270,7 @@ void showResult(int[][] b)
     }
   }
 
+
   println( "Black: " + countb + " / White:" + countw );
   // どっちが勝ちか（あるいは引き分けか）判定して表示する
   noLoop();
@@ -307,7 +308,7 @@ Move getMove(int[][] b, int te)
       {
         int newScore = evaluateMove(b, te, x, y);
         // もしも新しい手の価値のほうが、今覚えている手の価値より高いならば
-        if(  )
+        if(currentScore<newScore)
         {
           // その手を覚え
           result.x = x;
